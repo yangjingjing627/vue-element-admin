@@ -45,44 +45,84 @@ export default new Router({
 })
 
 export const asyncRouterMap = [
+  // {
+  //   path: '/permission',
+  //   component: Layout,
+  //   redirect: '/permission/index',
+  //   name: '权限测试',
+  //   icon: 'lock',
+  //   meta: { role: ['admin'] },
+  //   noDropdown: true,
+  //   children: [{ path: 'index', component: _import('permission/index'), name: '权限测试页', meta: { role: ['admin'] }}]
+  // },
+  // {
+  //   path: '/icon',
+  //   component: Layout,
+  //   icon: 'icon',
+  //   noDropdown: true,
+  //   children: [{ path: 'index', component: _import('svg-icons/index'), name: 'icons' }]
+  // },
   {
-    path: '/permission',
+    path: '/components',
     component: Layout,
-    redirect: '/permission/index',
-    name: '权限测试',
-    icon: 'lock',
-    meta: { role: ['admin'] },
-    noDropdown: true,
-    children: [{ path: 'index', component: _import('permission/index'), name: '权限测试页', meta: { role: ['admin'] }}]
-  },
-  {
-    path: '/icon',
-    component: Layout,
-    icon: 'icon',
-    noDropdown: true,
-    children: [{ path: 'index', component: _import('svg-icons/index'), name: 'icons' }]
+    redirect: '/components/index',
+    name: '开发API',
+    icon: 'component',
+    children: [
+      { path: 'index', component: _import('components/index'), name: 'API分组 ' },
+      { path: 'tinymce', component: _import('components/tinymce'), name: 'API' },
+      { path: 'markdown', component: _import('components/markdown'), name: '虚拟服务器' },
+      { path: 'jsoneditor', component: _import('components/jsonEditor'), name: '限速' },
+      { path: 'dndlist', component: _import('components/dndList'), name: 'ACL' },
+      { path: 'splitpane', component: _import('components/splitpane'), name: 'IP Restriction' }
+    ]
   },
   {
     path: '/components',
     component: Layout,
     redirect: '/components/index',
-    name: '组件',
+    name: '调用API',
     icon: 'component',
     children: [
-      { path: 'index', component: _import('components/index'), name: '介绍 ' },
-      { path: 'tinymce', component: _import('components/tinymce'), name: '富文本编辑器' },
-      { path: 'markdown', component: _import('components/markdown'), name: 'Markdown' },
-      { path: 'jsoneditor', component: _import('components/jsonEditor'), name: 'JSON编辑器' },
-      { path: 'dndlist', component: _import('components/dndList'), name: '列表拖拽' },
-      { path: 'splitpane', component: _import('components/splitpane'), name: 'SplitPane' },
-      { path: 'avatarupload', component: _import('components/avatarUpload'), name: '头像上传' },
-      { path: 'dropzone', component: _import('components/dropzone'), name: 'Dropzone' },
-      { path: 'sticky', component: _import('components/sticky'), name: 'Sticky' },
-      { path: 'countto', component: _import('components/countTo'), name: 'CountTo' },
-      { path: 'mixin', component: _import('components/mixin'), name: '小组件' },
-      { path: 'backtotop', component: _import('components/backToTop'), name: '返回顶部' }
+      { path: 'avatarUpload', component: _import('components/avatarUpload'), name: '发现API' },
+      { path: 'dropzone', component: _import('components/dropzone'), name: 'APP管理' }
     ]
   },
+  {
+    path: '/components',
+    component: Layout,
+    redirect: '/components/index',
+    name: '系统配置',
+    icon: 'component',
+    children: [
+      { path: 'sticky', component: _import('components/sticky'), name: '企业管理' },
+      { path: 'countto', component: _import('components/countTo'), name: '功能' },
+      { path: 'mixin', component: _import('components/mixin'), name: '用户管理' },
+      { path: 'backtotop', component: _import('components/backToTop'), name: '环境管理' }
+    ]
+  },
+
+  // {
+  //   path: '/components',
+  //   component: Layout,
+  //   redirect: '/components/index',
+  //   name: '组件',
+  //   icon: 'component',
+  //   children: [
+  //     { path: 'index', component: _import('components/index'), name: '介绍 ' },
+  //     { path: 'tinymce', component: _import('components/tinymce'), name: '富文本编辑器' },
+  //     { path: 'markdown', component: _import('components/markdown'), name: 'Markdown' },
+  //     { path: 'jsoneditor', component: _import('components/jsonEditor'), name: 'JSON编辑器' },
+  //     { path: 'dndlist', component: _import('components/dndList'), name: '列表拖拽' },
+  //     { path: 'splitpane', component: _import('components/splitpane'), name: 'SplitPane' },
+  //     { path: 'avatarupload', component: _import('components/avatarUpload'), name: '头像上传' },
+  //     { path: 'dropzone', component: _import('components/dropzone'), name: 'Dropzone' },
+  //     { path: 'sticky', component: _import('components/sticky'), name: 'Sticky' },
+  //     { path: 'countto', component: _import('components/countTo'), name: 'CountTo' },
+  //     { path: 'mixin', component: _import('components/mixin'), name: '小组件' },
+  //     { path: 'backtotop', component: _import('components/backToTop'), name: '返回顶部' }
+  //   ]
+  // },
   {
     path: '/charts',
     component: Layout,
