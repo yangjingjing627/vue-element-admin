@@ -63,66 +63,65 @@ export const asyncRouterMap = [
   //   children: [{ path: 'index', component: _import('svg-icons/index'), name: 'icons' }]
   // },
   {
-    path: '/components',
+    path: '/developAPI',
     component: Layout,
-    redirect: '/components/index',
+    redirect: '/developAPI/index',
     name: '开发API',
     icon: 'component',
     children: [
-      { path: 'index', component: _import('components/index'), name: 'API分组 ' },
-      { path: 'tinymce', component: _import('components/tinymce'), name: 'API' },
-      { path: 'markdown', component: _import('components/markdown'), name: '虚拟服务器' },
-      { path: 'jsoneditor', component: _import('components/jsonEditor'), name: '限速' },
-      { path: 'dndlist', component: _import('components/dndList'), name: 'ACL' },
-      { path: 'splitpane', component: _import('components/splitpane'), name: 'IP Restriction' }
+      { path: 'apigroup', component: _import('developAPI/apiGroup'), name: 'API分组 ' },
+      { path: 'api', component: _import('developAPI/api'), name: 'API' },
+      { path: 'virtualserver', component: _import('developAPI/virtualServer'), name: '虚拟服务器' },
+      { path: 'limitSpeed', component: _import('developAPI/limitSpeed'), name: '限速' },
+      { path: 'ACL', component: _import('developAPI/ACL'), name: 'ACL' },
+      { path: 'ipRestriction', component: _import('developAPI/ipRestriction'), name: 'IP Restriction' }
     ]
   },
   {
-    path: '/components',
+    path: '/callAPI',
     component: Layout,
-    redirect: '/components/index',
+    redirect: '/callAPI/index',
     name: '调用API',
     icon: 'component',
     children: [
-      { path: 'avatarUpload', component: _import('components/avatarUpload'), name: '发现API' },
-      { path: 'dropzone', component: _import('components/dropzone'), name: 'APP管理' }
+      { path: 'findApi', component: _import('callAPI/findApi'), name: '发现API' },
+      { path: 'appManage', component: _import('callAPI/appManage'), name: 'APP管理' }
+    ]
+  },
+  {
+    path: '/system',
+    component: Layout,
+    redirect: '/system/index',
+    name: '系统配置',
+    icon: 'component',
+    children: [
+      { path: 'businessManage', component: _import('system/businessManage'), name: '企业管理' },
+      { path: 'function', component: _import('system/function'), name: '功能' },
+      { path: 'userManage', component: _import('system/userManage'), name: '用户管理' },
+      { path: 'environment', component: _import('system/environmentManage'), name: '环境管理' }
     ]
   },
   {
     path: '/components',
     component: Layout,
     redirect: '/components/index',
-    name: '系统配置',
+    name: '组件',
     icon: 'component',
     children: [
-      { path: 'sticky', component: _import('components/sticky'), name: '企业管理' },
-      { path: 'countto', component: _import('components/countTo'), name: '功能' },
-      { path: 'mixin', component: _import('components/mixin'), name: '用户管理' },
-      { path: 'backtotop', component: _import('components/backToTop'), name: '环境管理' }
+      { path: 'index', component: _import('components/index'), name: '介绍 ' },
+      { path: 'tinymce', component: _import('components/tinymce'), name: '富文本编辑器' },
+      { path: 'markdown', component: _import('components/markdown'), name: 'Markdown' },
+      { path: 'jsoneditor', component: _import('components/jsonEditor'), name: 'JSON编辑器' },
+      { path: 'dndlist', component: _import('components/dndList'), name: '列表拖拽' },
+      { path: 'splitpane', component: _import('components/splitpane'), name: 'SplitPane' },
+      { path: 'avatarupload', component: _import('components/avatarUpload'), name: '头像上传' },
+      { path: 'dropzone', component: _import('components/dropzone'), name: 'Dropzone' },
+      { path: 'sticky', component: _import('components/sticky'), name: 'Sticky' },
+      { path: 'countto', component: _import('components/countTo'), name: 'CountTo' },
+      { path: 'mixin', component: _import('components/mixin'), name: '小组件' },
+      { path: 'backtotop', component: _import('components/backToTop'), name: '返回顶部' }
     ]
   },
-
-  // {
-  //   path: '/components',
-  //   component: Layout,
-  //   redirect: '/components/index',
-  //   name: '组件',
-  //   icon: 'component',
-  //   children: [
-  //     { path: 'index', component: _import('components/index'), name: '介绍 ' },
-  //     { path: 'tinymce', component: _import('components/tinymce'), name: '富文本编辑器' },
-  //     { path: 'markdown', component: _import('components/markdown'), name: 'Markdown' },
-  //     { path: 'jsoneditor', component: _import('components/jsonEditor'), name: 'JSON编辑器' },
-  //     { path: 'dndlist', component: _import('components/dndList'), name: '列表拖拽' },
-  //     { path: 'splitpane', component: _import('components/splitpane'), name: 'SplitPane' },
-  //     { path: 'avatarupload', component: _import('components/avatarUpload'), name: '头像上传' },
-  //     { path: 'dropzone', component: _import('components/dropzone'), name: 'Dropzone' },
-  //     { path: 'sticky', component: _import('components/sticky'), name: 'Sticky' },
-  //     { path: 'countto', component: _import('components/countTo'), name: 'CountTo' },
-  //     { path: 'mixin', component: _import('components/mixin'), name: '小组件' },
-  //     { path: 'backtotop', component: _import('components/backToTop'), name: '返回顶部' }
-  //   ]
-  // },
   {
     path: '/charts',
     component: Layout,
